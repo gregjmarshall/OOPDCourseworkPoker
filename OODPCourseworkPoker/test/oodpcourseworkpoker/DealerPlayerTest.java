@@ -92,7 +92,7 @@ public class DealerPlayerTest {
        int expected = 0;
        assertEquals(expected, output);
     }
-    
+    @Test
     public void testChooseDiscardStraight() { //Tests that no cards are discarded ffrom a straight
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(tenH);
@@ -105,7 +105,7 @@ public class DealerPlayerTest {
         int expected = 0;
         assertEquals("Testing number of cards discarded from straight: ",expected, output);
      }
-    
+    @Test
     public void testChooseDiscardFlush() { //Tests that cards are correctly discarded for Straight
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(tenH);
@@ -118,7 +118,7 @@ public class DealerPlayerTest {
         int expected = 0;
         assertEquals("Testing number of cards discarded from flush: ",expected, output);
      }
-    	
+     @Test   
      public void testChooseDiscardTrips() {  //tests that the correct number of cards are discarded from trips hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(jackH);
@@ -130,7 +130,7 @@ public class DealerPlayerTest {
         int expected = 2;
         assertEquals(output, expected);
      }
-     
+      @Test 
       public void testChooseDiscardTripsPartTwo() { // tests that the correct cards are discarded from trips hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(jackH);
@@ -144,7 +144,8 @@ public class DealerPlayerTest {
         assertFalse("Checking five of hearts was discarded.", output1.equals(fiveH));
         assertFalse("Checking eight of hearts was discarded.", output2.equals(eightH));
      }
-     
+      
+     @Test 
      public void testChooseDiscardTwoPair() {  //tests that the correct number of cards are discarded from a two pair hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(jackH);
@@ -157,6 +158,7 @@ public class DealerPlayerTest {
         assertEquals("Checking only 1 card is discarded from two pair hand", output, expected);
      }
      
+     @Test
      public void testChooseDiscardTwoPairPartTwo() {  //tests that the correct cards are discarded from a two pair hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(jackH);
@@ -168,7 +170,8 @@ public class DealerPlayerTest {
         Card output1 = testPlayer.getHand().getContents()[0];
         assertFalse("Checking five of hearts was discarded.", output1.equals(fiveH));
      }
-      
+     
+     @Test 
      public void testChooseDiscardOnePair() {  //tests that the correct number of cards are discarded from a one pair hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(jackH);
@@ -180,7 +183,7 @@ public class DealerPlayerTest {
         int expected = 3;
         assertEquals("Checking 3 cards are discarded from one pair hand", output, expected);
     }
-     
+     @Test
      public void testChooseDiscardOnePairPartTwo() {  //tests that the correct cards are discarded from a one pair hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(jackH);
@@ -197,6 +200,7 @@ public class DealerPlayerTest {
         assertFalse("Checking eight of spades was discarded.", output3.equals(eightS));
      }
      
+     @Test
      public void testChooseDiscardUnmadeHand() {  //tests that the correct number of cards are discarded from a particular unmade hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(kingH);
@@ -209,6 +213,7 @@ public class DealerPlayerTest {
         assertEquals("Checking 3 cards are discarded from one pair hand", output, expected);
      }
      
+     @Test
      public void testChooseDiscardUnmadeHandPartTwo() {  //tests that the correct cards are discarded from a particular unmade hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(kingH);
@@ -225,6 +230,7 @@ public class DealerPlayerTest {
         assertFalse("Checking eight of spades was discarded.", output3.equals(eightS));
      }
      
+     @Test
      public void testChooseDiscardUnmadeHandTenPlus() {  //tests that the correct number of cards are discarded from a slightly better unmade hand
         Player testPlayer = new DealerPlayer(); // in this case the 3rd card is ten or higher and only 2 cards should be discarded
         
@@ -238,6 +244,7 @@ public class DealerPlayerTest {
         assertEquals("Checking 2 cards are discarded from one pair hand", output, expected);
      }
      
+     @Test
      public void testChooseDiscardUnmadeHandTenPlusPartTwo() {  //tests that the correct cards are discarded from a slightly better unmade hand
         Player testPlayer = new DealerPlayer();
         testPlayer.receiveCard(kingH);
