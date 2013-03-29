@@ -6,23 +6,23 @@ package oodpcourseworkpoker;
  * @author marshall_gj
  */
 public class HumanPlayer implements Player { //This player represents the user player during the game and holds
-	private Hand hand = new FiveCardHand();	// his or her hands/cards
-	private String userName;
+    private Hand hand = new FiveCardHand();	// his or her hands/cards
+    private String userName;
 
 
-	public HumanPlayer(String userName) {
-		this.userName = userName;
-	}
-
-	@Override
-	public Hand getHand(){
-            return hand;
+    public HumanPlayer(String userName) {
+            this.userName = userName;
     }
 
-	@Override
-	public void receiveCard(Card c) {
-		hand.addCard(c);
-	}
+    @Override
+    public Hand getHand(){
+        return hand;
+}
+
+    @Override
+    public void receiveCard(Card c) {
+            hand.addCard(c);
+    }
 
     @Override
     public int chooseDiscard() {
@@ -30,9 +30,9 @@ public class HumanPlayer implements Player { //This player represents the user p
     }
 
 
-	@Override
-	public String getName() {
-		return userName;
-	}
+    @Override
+    public String getName() {
+            return userName;
+    }
 
 }

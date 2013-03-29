@@ -206,21 +206,20 @@ public class DealerPlayer implements Player {
         }
         return cardsChanged;
        
-   }
+    }
                 
+    @Override
+    public String getName() {
+            return dealerName;
+    }
 
-	@Override
-	public String getName() {
-		return dealerName;
-	}
 
+    public String dealerPicker() { //Selects a random dealer
+            int dealerRef = (int) (Math.random() * 10); // To generate a random number between 1 and 9
 
-	public String dealerPicker() { //Selects a random dealer
-		int dealerRef = (int) (Math.random() * 10); // To generate a random number between 1 and 9
+            String[] dealerNames = {"Malcolm", "Marlene", "Sven", "Rufus", "Jimmeny", "Victoria", "Tseng", "Frank", "Reginald", "Kingsley" };
 
-		String[] dealerNames = {"Malcolm", "Marlene", "Sven", "Rufus", "Jimmeny", "Victoria", "Tseng", "Frank", "Reginald", "Kingsley" };
+            return dealerNames[dealerRef];		
 
-		return dealerNames[dealerRef];		
-
-	}
+    }
 }

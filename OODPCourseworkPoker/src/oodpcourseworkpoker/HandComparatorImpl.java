@@ -8,6 +8,7 @@ package oodpcourseworkpoker;
 public class HandComparatorImpl implements HandComparator {
 	private String result;
 
+        @Override
 	public String getResult() {
 		return result;
 	}
