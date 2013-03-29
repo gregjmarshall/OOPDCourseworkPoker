@@ -135,17 +135,17 @@ public class TableTopImpl implements TableTop {
 
     @Override
     public void discardAndReplace() { //Allows user to exchange cards
-        String x = JOptionPane.showInputDialog("How many cards would you like to discard? [Maximum 3] ");
-        if (x == null) {
-            x = "0"; //Default value if user clicks cancel
+        int cardsToBin;
+        try {
+        cardsToBin = Integer.parseInt(JOptionPane.showInputDialog("How many cards would you like to discard? [Maximum 3] "));
         }
-
-        int cardsToBin = Integer.parseInt(x);
-
+        catch (NumberFormatException numEx) { //If user clicks cancel, default is 0
+                    cardsToBin = 0;
+                    System.out.println("I'll assume from that you mean zero!");
+        }
         while (cardsToBin > 3 || cardsToBin < 0) {
             System.out.println("You may only enter 0-3 cards to discard, please try again: ");
-            x = JOptionPane.showInputDialog("How many cards would you like to discard? [Maximum 3] ");
-            cardsToBin = Integer.parseInt(x);
+            cardsToBin = Integer.parseInt(JOptionPane.showInputDialog("How many cards would you like to discard? [Maximum 3] "));
         }
 
         /**
