@@ -1,15 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
+ *@author Anna Taylor
  * @author marshall_gj
  */
-public class HumanPlayer implements Player {
-	private Hand hand = new FiveCardHand();	
+public class HumanPlayer implements Player { //This player represents the user player during the game and holds
+	private Hand hand = new FiveCardHand();	// his or her hands/cards
 	private String userName;
 
 

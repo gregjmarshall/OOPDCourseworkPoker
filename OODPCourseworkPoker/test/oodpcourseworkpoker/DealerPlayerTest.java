@@ -1,8 +1,10 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
+
+/*
+ * *@author Anna Taylor
+ * @author Greg Marshall
+ */
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -11,7 +13,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class DealerPlayerTest {
+public class DealerPlayerTest { // This test class is to test the functions from the class representing the computer player.
 	private Player testPlayer;
 
 	private Card jackC;

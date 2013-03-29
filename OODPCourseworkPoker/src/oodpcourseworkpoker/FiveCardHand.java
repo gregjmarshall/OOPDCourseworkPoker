@@ -1,11 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
+ *@author Anna Taylor
  * @author marshall_gj
  */
 import java.util.Arrays;
@@ -61,10 +58,9 @@ public class FiveCardHand implements Hand {
 
 
 	@Override
-	public void evaluateHand() { //Should perhaps return a String so that this can be called directly
+	public void evaluateHand() { //This method is to evaluate the the hand so as it is translated into a readable value
 		//First sort the hand; this makes it easier to evaluate
 		this.sort();
-
 		//Check for four of a kind
 		boolean fourOfAKind = true;
 		for (int i = 0; i < 3; i++) { //Test the first four cards
@@ -102,7 +98,7 @@ public class FiveCardHand implements Hand {
 		for (int i = 0; i < 4; i++) {
 			if (handContents[i].getSuit() != handContents[i+1].getSuit()) {
 				flush = false;
-				break; //Stop testing for flush as soon as 
+				break; //Stop testing for flush as soon as off-suit card is located
 			}
 		}
 		if (flush) {

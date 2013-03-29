@@ -1,11 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
+ *@author Anna Taylor
  * @author marshall_gj
  */
 import java.util.Collections;
@@ -13,12 +10,13 @@ import java.util.List;
 import java.util.LinkedList;
 public class DeckImpl implements Deck {
 	private List<Card> deckContents = new LinkedList<Card>();
-
+        
+        
 	public DeckImpl() {
 		this.createCards();
 	}
 
-
+        @Override
 	public List<Card> getContents() {
 		return deckContents;
 	}
@@ -38,7 +36,8 @@ public class DeckImpl implements Deck {
 			}
 		}		
 	}
-
+        
+        @Override
 	public Card popCard() {		
 		Card topCard = deckContents.remove(0); //List.remove() shifts the rest of the deck up one index after removal of top item
 		return topCard;
@@ -47,6 +46,7 @@ public class DeckImpl implements Deck {
 	/**
 	 * For visual testing of card creation and shuffling.
 	 */
+        @Override
 	public void printDeck() {
 		for (int i = 0; i < deckContents.size(); i++) {
 			System.out.println(deckContents.get(i).toString());

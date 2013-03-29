@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
- * @author marshall_gj
+ *@author Anna Taylor
+ * @author Greg Marshall
  */
 public interface Card extends Comparable<Card> {
 

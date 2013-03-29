@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 import org.junit.After;
@@ -11,9 +8,9 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author marshall_gj
+/*
+ * *@author Anna Taylor
+ * @author Greg Marshall
  */
 public class TableTopTest { 
 	private TableTop testTable;

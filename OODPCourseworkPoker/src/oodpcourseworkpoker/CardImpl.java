@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
- * @author marshall_gj
+ * @author Anna Taylor
+ * @author Greg Marshall
  */
 public class CardImpl implements Card {
 	private final Suit SUIT;
@@ -44,12 +41,10 @@ public class CardImpl implements Card {
 	public int compareTo(Card c) {
 		CardImpl card = (CardImpl) c;
 		return this.RANK.getValue() - card.RANK.getValue();
-		//Postive value: this object is greater than c														   
-		//Negative: this object is less than c
-		//0: this object is equal to c
+                                    //Postive value: this object is greater than c														   
+                                    //Negative: this object is less than c
+                                    //0: this object is equal to c
 	}
-
-
 	@Override
 	public int getRankValue() {
 		return RANK.getValue();

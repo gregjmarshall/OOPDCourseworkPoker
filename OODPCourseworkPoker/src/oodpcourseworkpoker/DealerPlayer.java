@@ -1,11 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
+ *@author Anna Taylor
  * @author marshall_gj
  */
 public class DealerPlayer implements Player {
@@ -31,11 +28,11 @@ public class DealerPlayer implements Player {
    
    
    @Override
-   public int chooseDiscard() {
-        int cardsChanged = 0;
+   public int chooseDiscard() { // This method is for simulating the decision 
+        int cardsChanged = 0;// the computer makes about how many cards to discard.
         hand.evaluateHand();
         
-        if (hand.getHandValue() == "Four of a Kind" || hand.getHandValue() == "Straight" || hand.getHandValue() == "Flush") {
+        if (hand.getHandValue().equals("Four of a Kind") || hand.getHandValue().equals("Straight") || hand.getHandValue().equals("Flush")) {
             System.out.println(dealerName + " doesn't seem to be discarding any cards!");
             return cardsChanged; //Prevents the above hands from being checked further; no need to change anything
         }
@@ -221,7 +218,7 @@ public class DealerPlayer implements Player {
 	public String dealerPicker() { //Selects a random dealer
 		int dealerRef = (int) (Math.random() * 10); // To generate a random number between 1 and 9
 
-		String[] dealerNames = {"Malcolm", "Marlene", "Sven", "Rufus", "Michael", "Victoria", "Tseng", "Frank", "Paul", "Adam" };
+		String[] dealerNames = {"Malcolm", "Marlene", "Sven", "Rufus", "Jimmeny", "Victoria", "Tseng", "Frank", "Reginald", "Kingsley" };
 
 		return dealerNames[dealerRef];		
 

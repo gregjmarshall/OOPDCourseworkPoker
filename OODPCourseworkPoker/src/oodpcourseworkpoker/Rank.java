@@ -1,11 +1,8 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package oodpcourseworkpoker;
 
 /**
- *
+ *@author Anna Taylor
  * @author marshall_gj
  */
 public enum Rank {
