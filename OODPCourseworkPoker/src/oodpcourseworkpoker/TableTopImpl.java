@@ -113,14 +113,14 @@ public class TableTopImpl implements TableTop {
 
             String cont = JOptionPane.showInputDialog("Would you like to play another hand? Enter Y to continue or N to exit: ");
             if (cont == null) {
-                    cont = "N"; //N is assumed if the user clicks cancel
+                cont = "N"; //N is assumed if the user clicks cancel
             }
             if (cont.contains("N")|| cont.equals("n")) {
                 finished = true;
-                System.out.append("Thanks for playing!");
+                System.out.println("Thanks for playing!");
             }
             else if (!cont.contains("Y") || !cont.contains("y")) { //If the user enters something other than Y or N
-                    System.out.append("   I'll take that as a yes, then!   ");
+                System.out.println("   I'll take that as a yes, then!   ");
             }
         }
     }
