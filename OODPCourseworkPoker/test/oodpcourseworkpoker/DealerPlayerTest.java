@@ -141,8 +141,8 @@ public class DealerPlayerTest {
         testPlayer.chooseDiscard();
         Card output1 = testPlayer.getHand().getContents()[0];
         Card output2 = testPlayer.getHand().getContents()[1];
-        assertFalse("Checking five of hearts was discarded.", output1.equals(fiveH));
-        assertFalse("Checking eight of hearts was discarded.", output2.equals(eightH));
+        assertEquals("Checking five of hearts was discarded.", output1, null);
+        assertEquals("Checking eight of hearts was discarded.", output2, null);
      }
       
      @Test 
@@ -168,7 +168,7 @@ public class DealerPlayerTest {
         testPlayer.receiveCard(fiveH);
         testPlayer.chooseDiscard();
         Card output1 = testPlayer.getHand().getContents()[0];
-        assertFalse("Checking five of hearts was discarded.", output1.equals(fiveH));
+        assertEquals("Checking five of hearts was discarded.", output1, null);
      }
      
      @Test 
@@ -195,9 +195,9 @@ public class DealerPlayerTest {
         Card output1 = testPlayer.getHand().getContents()[0];
         Card output2 = testPlayer.getHand().getContents()[1];
         Card output3 = testPlayer.getHand().getContents()[2];
-        assertFalse("Checking three of hearts was discarded.", output1.equals(threeH));
-        assertFalse("Checking five of hearts was discarded.", output2.equals(fiveH));
-        assertFalse("Checking eight of spades was discarded.", output3.equals(eightS));
+        assertEquals("Checking five of hearts was discarded.", output1, null);
+        assertEquals("Checking three of hearts was discarded.", output2, null);
+        assertEquals("Checking eight of spades was discarded.", output3, null);
      }
      
      @Test
@@ -225,9 +225,9 @@ public class DealerPlayerTest {
         Card output1 = testPlayer.getHand().getContents()[0];
         Card output2 = testPlayer.getHand().getContents()[1];
         Card output3 = testPlayer.getHand().getContents()[2];
-        assertFalse("Checking three of hearts was discarded.", output1.equals(threeH));
-        assertFalse("Checking five of hearts was discarded.", output2.equals(fiveH));
-        assertFalse("Checking eight of spades was discarded.", output3.equals(eightS));
+        assertEquals("Checking five of hearts was discarded.", output1, null);
+        assertEquals("Checking three of hearts was discarded.", output2, null);
+        assertEquals("Checking eight of spades was discarded.", output3, null);
      }
      
      @Test
@@ -255,8 +255,8 @@ public class DealerPlayerTest {
         testPlayer.chooseDiscard();
         Card output1 = testPlayer.getHand().getContents()[0];
         Card output2 = testPlayer.getHand().getContents()[1];
-        assertFalse("Checking three of hearts was discarded.", output1.equals(threeH));
-        assertFalse("Checking five of hearts was discarded.", output2.equals(fiveH));
+        assertEquals("Checking five of hearts was discarded.", output1, null);
+        assertEquals("Checking three of hearts was discarded.", output2, null);
      }
      
 }
