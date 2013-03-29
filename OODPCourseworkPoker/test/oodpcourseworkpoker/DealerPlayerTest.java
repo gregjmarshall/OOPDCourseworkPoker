@@ -16,7 +16,21 @@ import static org.junit.Assert.*;
  * @author marshall_gj
  */
 public class DealerPlayerTest {
-
+        Card jackC = new CardImpl(Rank.JACK, Suit.CLUBS);
+        Card tenH = new CardImpl(Rank.TEN, Suit.HEARTS);
+        Card nineD = new CardImpl(Rank.NINE, Suit.DIAMONDS);
+        Card eightD = new CardImpl(Rank.EIGHT, Suit.DIAMONDS);
+        Card sevenH = new CardImpl(Rank.SEVEN, Suit.HEARTS);
+        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
+        Card nineH = new CardImpl(Rank.NINE, Suit.HEARTS);
+        Card eightH = new CardImpl(Rank.EIGHT, Suit.HEARTS);
+        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
+        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
+        Card jackS = new CardImpl(Rank.JACK, Suit.SPADES);
+        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
+        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
+        Card kingH = new CardImpl(Rank.KING, Suit.HEARTS);
+        Card tenS = new CardImpl(Rank.TEN, Suit.SPADES);
 	@Test
 	public void testGetName() {
 		Player player = new DealerPlayer();
@@ -81,11 +95,6 @@ public class DealerPlayerTest {
     
     public void testChooseDiscardStraight() { //Tests that no cards are discarded ffrom a straight
         Player testPlayer = new DealerPlayer();
-        Card jackC = new CardImpl(Rank.JACK, Suit.CLUBS);
-        Card tenH = new CardImpl(Rank.TEN, Suit.HEARTS);
-        Card nineD = new CardImpl(Rank.NINE, Suit.DIAMONDS);
-        Card eightD = new CardImpl(Rank.EIGHT, Suit.DIAMONDS);
-        Card sevenH = new CardImpl(Rank.SEVEN, Suit.HEARTS);
         testPlayer.receiveCard(tenH);
         testPlayer.receiveCard(jackC);
         testPlayer.receiveCard(nineD);
@@ -99,11 +108,6 @@ public class DealerPlayerTest {
     
     public void testChooseDiscardFlush() { //Tests that cards are correctly discarded for Straight
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card tenH = new CardImpl(Rank.TEN, Suit.HEARTS);
-        Card nineH = new CardImpl(Rank.NINE, Suit.HEARTS);
-        Card eightH = new CardImpl(Rank.EIGHT, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(tenH);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(nineH);
@@ -117,11 +121,6 @@ public class DealerPlayerTest {
     	
      public void testChooseDiscardTrips() {  //tests that the correct number of cards are discarded from trips hand
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card jackS = new CardImpl(Rank.JACK, Suit.SPADES);
-        Card eightH = new CardImpl(Rank.EIGHT, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(jackS);
@@ -134,11 +133,6 @@ public class DealerPlayerTest {
      
       public void testChooseDiscardTripsPartTwo() { // tests that the correct cards are discarded from trips hand
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card jackS = new CardImpl(Rank.JACK, Suit.SPADES);
-        Card eightH = new CardImpl(Rank.EIGHT, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(jackS);
@@ -153,11 +147,6 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardTwoPair() {  //tests that the correct number of cards are discarded from a two pair hand
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
-        Card eightH = new CardImpl(Rank.EIGHT, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(eightS);
@@ -170,11 +159,6 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardTwoPairPartTwo() {  //tests that the correct cards are discarded from a two pair hand
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
-        Card eightH = new CardImpl(Rank.EIGHT, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(eightS);
@@ -187,11 +171,6 @@ public class DealerPlayerTest {
       
      public void testChooseDiscardOnePair() {  //tests that the correct number of cards are discarded from a one pair hand
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
-        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(eightS);
@@ -204,11 +183,6 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardOnePairPartTwo() {  //tests that the correct cards are discarded from a one pair hand
         Player testPlayer = new DealerPlayer();
-        Card jackH = new CardImpl(Rank.JACK, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
-        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(jackH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(eightS);
@@ -225,11 +199,6 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardUnmadeHand() {  //tests that the correct number of cards are discarded from a particular unmade hand
         Player testPlayer = new DealerPlayer();
-        Card kingH = new CardImpl(Rank.KING, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
-        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(kingH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(eightS);
@@ -242,11 +211,6 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardUnmadeHandPartTwo() {  //tests that the correct cards are discarded from a particular unmade hand
         Player testPlayer = new DealerPlayer();
-        Card kingH = new CardImpl(Rank.KING, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card eightS = new CardImpl(Rank.EIGHT, Suit.SPADES);
-        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(kingH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(eightS);
@@ -263,11 +227,7 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardUnmadeHandTenPlus() {  //tests that the correct number of cards are discarded from a slightly better unmade hand
         Player testPlayer = new DealerPlayer(); // in this case the 3rd card is ten or higher and only 2 cards should be discarded
-        Card kingH = new CardImpl(Rank.KING, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card tenS = new CardImpl(Rank.TEN, Suit.SPADES);
-        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
+        
         testPlayer.receiveCard(kingH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(tenS);
@@ -280,11 +240,6 @@ public class DealerPlayerTest {
      
      public void testChooseDiscardUnmadeHandTenPlusPartTwo() {  //tests that the correct cards are discarded from a slightly better unmade hand
         Player testPlayer = new DealerPlayer();
-        Card kingH = new CardImpl(Rank.KING, Suit.HEARTS);
-        Card jackD = new CardImpl(Rank.JACK, Suit.DIAMONDS);
-        Card tenS = new CardImpl(Rank.TEN, Suit.SPADES);
-        Card threeH = new CardImpl(Rank.THREE, Suit.HEARTS);
-        Card fiveH = new CardImpl(Rank.FIVE, Suit.HEARTS);
         testPlayer.receiveCard(kingH);
         testPlayer.receiveCard(jackD);
         testPlayer.receiveCard(tenS);
