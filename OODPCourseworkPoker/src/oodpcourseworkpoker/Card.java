@@ -7,18 +7,18 @@ package oodpcourseworkpoker;
  */
 public interface Card extends Comparable<Card> {
 
-    public Suit getSuit();
+	public Suit getSuit();
 
-    public Rank getRank();
+	public Rank getRank();
 
-    /**
-     * Returns rank value as int rather than enum type.
-     * @return int numerical value of a card's rank.
-     */
-    public int getRankValue();
+	/**
+	 * Returns rank value as int rather than enum type.
+	 * @return int numerical value of a card's rank.
+	 */
+	public int getRankValue();
 
-    @Override
-    public int compareTo(Card c);
+	@Override
+	public int compareTo(Card c);
 
 
 }
