@@ -137,8 +137,8 @@ public class TableTopImpl implements TableTop {
     public void discardAndReplace() { //Allows user to exchange cards
         int cardsToBin;
         try {
-        cardsToBin = Integer.parseInt(JOptionPane.showInputDialog("How many cards would you like to discard? [Maximum 3] "));
-        }
+        cardsToBin = Integer.parseInt(JOptionPane.showInputDialog("How many cards would you like to discard? [Minimum 0][Maximum 3][Non-numerical input skips discard stage] "));
+        } //This section will assume zero cards are to be changed is a non-numerical input is entered. Otherwise it will move on.
         catch (NumberFormatException numEx) { //If user clicks cancel, default is 0
                     cardsToBin = 0;
                     System.out.println("I'll assume from that you mean zero!");
