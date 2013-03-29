@@ -144,8 +144,15 @@ public class TableTopImpl implements TableTop {
                     System.out.println("I'll assume from that you mean zero!");
         }
         while (cardsToBin > 3 || cardsToBin < 0) {
+            try{
             System.out.println("You may only enter 0-3 cards to discard, please try again: ");
             cardsToBin = Integer.parseInt(JOptionPane.showInputDialog("How many cards would you like to discard? [Maximum 3] "));
+            }
+            catch (NumberFormatException numEx) { //If user clicks cancel, default is 0
+                    cardsToBin = 0;
+                    System.out.println("I'll assume from that you mean zero!");
+                
+            }
         }
 
         /**
@@ -158,9 +165,8 @@ public class TableTopImpl implements TableTop {
             try {
                     cardDis = Integer.parseInt(JOptionPane.showInputDialog("Which card would you like to discard next? [Enter 1,2,3,4 or 5]"));
             }
-            catch (NumberFormatException numEx) { //If user clicks cancel, default is 0
-                    cardDis = 0;
-                    break;
+            catch (NumberFormatException numEx) { //If user clicks cancel, they must try again as they have previously chosen a number of cards to discard
+                    cardDis = 9;
             }
             if(cardDis > 0 && cardDis < 6) {
                 humanPlayer.getHand().discardCard(cardDis);
