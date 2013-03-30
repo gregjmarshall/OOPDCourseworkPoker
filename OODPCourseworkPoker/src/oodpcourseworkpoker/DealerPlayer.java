@@ -31,15 +31,13 @@ public class DealerPlayer implements Player {
    public int chooseDiscard() {
         int cardsChanged = 0;
         hand.evaluateHand();
-        System.out.println("checking for made hand....");
         
         if (hand.getHandValue() == "Four of a Kind" || hand.getHandValue() == "Straight" || hand.getHandValue() == "Flush") {
             System.out.println(dealerName + " doesn't seem to be discarding any cards!");
             return cardsChanged; //Prevents the above hands from being checked further; no need to change anything
         }
         
-        else if(hand.getHandValue().equals("Three of a Kind")) {  // hand class returns handValue and for three of a kind 
-            System.out.println("checking for three of a kind....");
+        else if(hand.getHandValue().equals("Three of a Kind")) {  // hand class returns handValue and for three of a kind
                 if(hand.getProcessingValue() == 1) {      //will return a 'processing value depending on the location of the trips in the hand
                     hand.discardCard(4);                   // 1: first three, 2: second 3, 3: third three
                     hand.discardCard(5);
@@ -61,7 +59,6 @@ public class DealerPlayer implements Player {
         }
         
         else if(hand.getHandValue().equals("Two Pair")) {
-             System.out.println("checking for two pair....");
             if(hand.getProcessingValue() == 1) {          // processing values for 2 pair where P = paired card are 
                 hand.discardCard(5);                       // 1: PPPPX, 2: PPXPP, 3: XPPPP.
                 cardsChanged = 1;
@@ -78,9 +75,8 @@ public class DealerPlayer implements Player {
                 return cardsChanged;
             }
         }
-        else if(hand.getHandValue().equals("One Pair")) {  //processing values for 1 pair hands where P = paired card are
-            System.out.println("checking for one pair...."); // 1: PPXXX, 2: XPPXX, 3: XXPPX, 4: XXXPP
-            if(hand.getProcessingValue() ==  1) {      
+        else if(hand.getHandValue().equals("One Pair")) {  //processing values for 1 pair hands where P = paired card are 
+            if(hand.getProcessingValue() ==  1) {      // 1: PPXXX, 2: XPPXX, 3: XXPPX, 4: XXXPP
                 hand.discardCard(3);
                 hand.discardCard(4);
                 hand.discardCard(5);
@@ -110,7 +106,6 @@ public class DealerPlayer implements Player {
             }
         }
         else if (hand.getProcessingValue() == 0) { // this is for non-made hands (eg high card)
-            System.out.println("checking unmade hand for suits....");
             int spades = 0;                        // the first part of the section is to establish 
             int hearts = 0;                        // if the dealer should draw to a flush
             int clubs = 0;
@@ -171,7 +166,6 @@ public class DealerPlayer implements Player {
             }
             
            if (hand.getProcessingValue() == 0) { //this section tests to see if the first four or
-                System.out.println("checking unmade hand for straight draw....");
                 boolean lowStrDraw = true;             // last four cards are in sequence to decide whether to draw to a straight
                 for (int i = 0; i < 4; i++) {
                 	if (hand.getContents()[i].getRankValue() != (hand.getContents()[i+1].getRankValue() - 1)) {
@@ -197,8 +191,6 @@ public class DealerPlayer implements Player {
                 }
            	}     
         }
-        
-        System.out.println("checking unmade hand to bin low cards....");
         if(hand.getContents()[2].getRankValue() < 10) { 
 	        hand.discardCard(1);
 	        hand.discardCard(2);
