@@ -8,9 +8,11 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/*
- * *@author Anna Taylor
+/**
+ *@author Anna Taylor
  * @author Greg Marshall
+ * MSc Computer Science 
+ * Submission date: 31/03/2013
  */
 public class HandComparatorTest {
 	private HandComparator testComparator;

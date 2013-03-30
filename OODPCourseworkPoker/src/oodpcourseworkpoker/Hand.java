@@ -3,7 +3,9 @@ package oodpcourseworkpoker;
 
 /**
  *@author Anna Taylor
- * @author marshall_gj
+ * @author Greg Marshall
+ * MSc Computer Science 
+ * Submission date: 31/03/2013
  */
 public interface Hand extends Comparable<Hand> {
 
