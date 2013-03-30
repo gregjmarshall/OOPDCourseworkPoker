@@ -27,7 +27,7 @@ public class TableTopTest {
 
 	@Test(timeout = 1000) //Expected to fail; shows that pause() doesn't finish prematurely
 	public void testPauseLengthFail() {
-		testTable.pause();
+		testTable.pause();	
 		System.out.println("Pause complete.");
 	}
 

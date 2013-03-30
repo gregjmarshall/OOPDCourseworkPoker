@@ -43,19 +43,11 @@ public class DeckImpl implements Deck {
             return topCard;
     }
 
-    /**
-     * For visual testing of card creation and shuffling.
-     */
     @Override
     public void printDeck() {
             for (int i = 0; i < deckContents.size(); i++) {
                     System.out.println(deckContents.get(i).toString());
             }
-    }
-
-    /**
-     * @param args
-     */
-	
+    }	
 
 }

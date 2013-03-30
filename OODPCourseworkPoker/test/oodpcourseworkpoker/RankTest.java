@@ -16,8 +16,8 @@ public class RankTest {
 
 	@Test
 	public void testGetValue() { 
-		int expected = 1;
-		int output = Rank.ACE.getValue();
+		int expected = 2;
+		int output = Rank.TWO.getValue();
 		assertEquals("Problem with getValue()", expected, output);
 	}
 
@@ -29,10 +29,19 @@ public class RankTest {
 	}
 
 	@Test
+	public void TestGetValueAce() {
+		int expected = 14;
+		int output = Rank.ACE.getValue();
+		assertEquals("Problem with getValue() - Ace,", expected, output);
+	}
+
+	@Test
 	public void testToString() {
 		String expected = "Five";
 		String output = Rank.FIVE.toString();
 		assertEquals("Problem with toString() override", expected, output);
 	}
+
+
 
 }
